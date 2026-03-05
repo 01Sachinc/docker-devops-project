@@ -38,15 +38,15 @@ graph LR
 ### 🛠️ High-Level Architecture
 
 ```mermaid
-graph TD
+graph LR
     Dev([Developer]) -->|Git Push| GitHub{GitHub Repo}
-    subgraph "CI/CD Pipeline (GitHub Actions)"
+    subgraph GitHub_Actions ["CI/CD Pipeline"]
         GitHub --> Build[Docker Build]
         Build --> Run[Run Container]
         Run --> Health[Health Monitoring]
         Health --> Deploy[Simulated Deployment]
     end
-    subgraph "Target Environment"
+    subgraph Target ["Target Environment"]
         Deploy --> Prod[Cloud-Ready Instance]
     end
 ```
@@ -118,42 +118,6 @@ docker-devops-project/
 ```
 
 ---
-
-## 🖼️ Screenshots Section (Placeholders)
-
-1. **Docker Build**: ![Build](screenshots/docker-build.png)
-2. **Container Running**: ![Running](screenshots/docker-container-running.png)
-3. **Pipeline Success**: ![Pipeline](screenshots/pipeline.png)
-
----
-
-## 💼 LinkedIn & Resume Showcase
-
-### LinkedIn Post Content
-
-**Headline**: Just Containerized my Local Workflow with Docker & CI/CD! 🚀
-
-I'm excited to share my latest project: a **Cloud-Ready Dockerized Application**! 📦
-
-I focused on demonstrating how the "Twelve-Factor App" methodology applies to modern DevOps.
-
-🔹 **What I Built**:
-
-- A lightweight, production-ready Nginx container.
-- Automated Bash scripts for single-command builds and monitoring.
-- A 5-stage GitHub Actions pipeline that simulates a full cloud deployment.
-- Proactive health monitoring to ensure 100% uptime.
-
-This project highlights my skills in Docker orchestration, Linux automation, and CI/CD strategy.
-
-#DevOps #Docker #Automation #CloudComputing #SachinPortfolio #CICD
-
-### Resume Bullet Points
-
-- **Architected a Containerized Deployment Workflow**: Developed a scalable Docker lifecycle using Nginx and Alpine Linux, reducing image footprints by 85% and ensuring environment parity.
-- **Automated Lifecycle Management**: Engineered a suite of Bash automation scripts for seamless build, run, and monitoring phases, streamlining local development and production handoffs.
-- **Implemented GitHub Actions CI/CD**: Designed a multi-stage pipeline that automates Docker builds and container health checks, ensuring zero-fault deployments.
-- **Infrastructure-as-Code (IaC) Modeling**: Created comprehensive Docker Compose configurations to orchestrate multi-service environments for local and cloud-ready simulation.
 
 ---
 
